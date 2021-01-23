@@ -1,0 +1,10 @@
+<StackPanel xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <TextBlock Style="{StaticResource BodyTextBlockStyle}">This device has been registered in the Windows Insider Program using a batch file found on GitHub. If you want to change which channel you receive your builds from or if you want to stop receiving builds, please use the batch file.</TextBlock>
+    <TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="0,10,0,0" FontSize="20">Which channel has this device been registered to?</TextBlock>
+    <TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="0,5,0,0">This device has been registered to the <Run FontWeight="SemiBold">%FriendlyChannelName% Channel</Run>.</TextBlock>
+    <TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="0,10,0,0" FontSize="20">Why am I not receiving any builds from the %FriendlyChannelName% Channel?</TextBlock>
+    <TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="0,5,0,0">The Windows Insider Program requires you to send <Run FontWeight="SemiBold">Optional</Run> diagnostic data. Please check your diagnostic data setting in <Run FontWeight="SemiBold">Diagnostics &amp; feedback</Run>.</TextBlock>
+    <Button Command="{StaticResource ActivateUriCommand}" CommandParameter="ms-settings:privacy-feedback" Margin="0,10,0,0">
+        <TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="5,0,5,0">Open Diagnostics &amp; feedback</TextBlock>
+    </Button>
+</StackPanel>
