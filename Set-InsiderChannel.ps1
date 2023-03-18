@@ -53,12 +53,10 @@ function Get-InsiderChannel {
         Write-Host "You have unenrolled your device from the Windows Insider Program."
         if ($eb2a422cf90f18f524f7d8f60522468b -eq $true) {
             Request-DeviceRestart
-            break
         }
         break
     } else {
         Request-InsiderChannel
-        break
     }
     Set-InsiderChannel
 }
@@ -107,7 +105,6 @@ function Set-InsiderChannel {
     Write-Host "You have enrolled your device to the $b1e8786f218646f64e02a72e2c310082 in the Windows Insider Program."
     if ($eb2a422cf90f18f524f7d8f60522468b -eq $false) {
         Request-DeviceRestart
-        break
     }
 }
 
@@ -126,7 +123,6 @@ function Request-DeviceRestart {
         exit
     } else {
         Request-DeviceRestart
-        break
     }
 }
 
